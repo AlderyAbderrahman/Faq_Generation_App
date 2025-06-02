@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ Generator</title>
+</head>
+<body>
+    <h1>Upload your document</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf" required>
+        <button type="submit">Upload</button>
+    </form>
+
+{% if faqs %}
+    <h2>Generated FAQs:</h2>
+    <pre>{{ faqs }}</pre>
+{% endif %}
+
+</body>
+</html>
