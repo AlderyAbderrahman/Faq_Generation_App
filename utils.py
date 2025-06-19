@@ -10,7 +10,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def generate_faq(text):
-    prompt = f"""From the following text, generate a list of 5–10 Frequently Asked Questions with answers.
+    prompt = f"""From the following text, generate a list of 5–10 Frequently Asked Questions with answers , make the questions helpful.
 Be concise, helpful, and use simple language.
 
 Text: {text}
